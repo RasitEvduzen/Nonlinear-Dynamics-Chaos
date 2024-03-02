@@ -11,7 +11,6 @@ finalval = 4;
 logistic = @(xk,r) (r*xk*(1-xk));
 
 figure('units','normalized','outerposition',[0 0 1 1],'color','w')
-gif('bifurcation.gif')
 for r = initialval:5e-3:finalval
     x = 0.5;
     for i=1:1e3
@@ -30,7 +29,6 @@ for r = initialval:5e-3:finalval
     plot(xvals(1,:),xvals(2,:),'r.','LineWidth',.1,'MarkerSize',1.2,'Color',[1 0 0])
     axis([initialval finalval 0 1]),grid on,title('Logistic Map Bifurcation Diagram')
     drawnow
-    gif
 end
 
 
