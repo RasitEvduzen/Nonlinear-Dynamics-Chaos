@@ -4,10 +4,10 @@ clc,clear,close all;
 % 09-Dec-2024
 %%
 rng(0)
-K = .25;   % Coupling
+K = .45;   % Coupling
 N = 36;     % Number of fireflies
 omega = .1; % Frequency of fireflies flashing
-tf = 40;   % End time of simulation  [Sn]
+tf = 35;   % End time of simulation  [Sn]
 dt = 1e-3;              % Sampling Time
 
 % Initialize
