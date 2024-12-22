@@ -38,14 +38,14 @@ for row = 1:grid_size
         circles(row, col) = fill(x_circle, y_circle, 'w', 'EdgeColor', 'k'); 
     end
 end
-gif('FireFlies.gif')
+% gif('FireFlies.gif')
 for ti = 1:1e2:length(t)-dt
     for row = 1:grid_size
         for col = 1:grid_size
             phase_index = (row-1)*grid_size + col;
             current_angle = angular_velocity * t(ti) + phase_angles(ti, phase_index);
             if sin(current_angle) > 0
-                set(circles(row, col), 'FaceColor', 'yellow'); 
+                set(circles(row, col), 'FaceColor', "yellow"); 
             else
                 set(circles(row, col), 'FaceColor', 'white');   
             end
@@ -60,7 +60,7 @@ for ti = 1:1e2:length(t)-dt
     end
     htext = text(-115,-5,str,FontSize=40,Color="c");
     pause(.1)
-    gif
+%     gif
     delete(htext);
 end
 
